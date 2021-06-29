@@ -10,7 +10,7 @@ This is a Maze that is controlled by the position of your phone's accelerometer.
 # Final Milestone
 IN CONSTRUCTION! 
 
-[![Final Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone"){:target="_blank" rel="noopener"}
+[![Final Milestone]( )](){:target="_blank" rel="noopener"}
 
 # Second Milestone
 For my second milestone, I had an ESP32 connected to my phone via bluetooth sending accelerometer values from the phone's accelerometer to the serial monitor. With the second Milestone, I had to use the MIT app inventor, Arduino IDE, ESP32 module, and a phone with an accelerometer. When I was trying to send data values between my phone and computer, I ran into a bug about the ESP32 drivers being old and not supported with the Arduino IDE which caused the ESP32 to not be recognized. Also, when I was trying to get the roll and pitch values, the values were not showing up on the serial monitor, but were showing up on the app. In order to solve the accelerometer bug, I had to find what the source of the problem was by using a bluetooth terminal to test whether values were showing up on the ESP32. Once I realized the code was the problem, I looked through the code and found that I had used Serial.begin() instead of SerialBT.begin. The serial bluetooth library has different methods, and functions that can be used. The SerialBT function enables bluetooth while the Serial function doesn't.        
